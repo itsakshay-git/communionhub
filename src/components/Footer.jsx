@@ -1,12 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -21,11 +17,6 @@ const Footer = () => {
         y: 0,
         duration: 1.5,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
       }
     );
 
@@ -37,11 +28,6 @@ const Footer = () => {
         x: 0,
         duration: 1.2,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: linksRef.current,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
       }
     );
   }, []);
@@ -68,15 +54,15 @@ const Footer = () => {
         <div ref={linksRef} className="mt-8 md:mt-0 bg-transparent border border-white rounded-lg px-6 py-4">
           <h3 className="font-semibold text-lg mb-2">Company</h3>
           <ul className="space-y-2 text-sm">
-          <Link to="/" className="hover:text-gray-700">
-            <li className="cursor-pointer hover:underline">Home</li>
-          </Link>
-          <Link to="/events" className="hover:text-gray-700">
-            <li className="cursor-pointer hover:underline">Events</li>
-          </Link>
-          <Link to="/about" className="hover:text-gray-700">
-            <li className="cursor-pointer hover:underline">About</li>
-          </Link>
+            <Link to="/" className="hover:text-gray-700">
+              <li className="cursor-pointer hover:underline">Home</li>
+            </Link>
+            <Link to="/events" className="hover:text-gray-700">
+              <li className="cursor-pointer hover:underline">Events</li>
+            </Link>
+            <Link to="/about" className="hover:text-gray-700">
+              <li className="cursor-pointer hover:underline">About</li>
+            </Link>
           </ul>
         </div>
       </div>

@@ -94,8 +94,8 @@ const Events = () => {
         Upcoming Events
       </motion.h2>
 
-      <div className="flex justify-between items-center gap-4 mb-6">
-        <div className="flex gap-5">
+      <div className="flex justify-between items-center gap-4 mb-6 max-sm:block">
+        <div className="flex gap-5 max-sm:mb-4">
           {["All", "Religious", "Social", "Charity"].map((category) => (
             <button
               key={category}

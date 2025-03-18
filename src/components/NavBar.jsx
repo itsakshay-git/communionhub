@@ -46,7 +46,7 @@ const NavBar = () => {
                         {["Home", "Events", "About"].map((item, index) => (
                             <li key={index} onClick={() => setIsOpen(false)}>
                                 <Link
-                                    to={`/${item.toLowerCase()}`}
+                                    to={item == "Home" ? `/` : `/${item.toLowerCase()}`}
                                     className="hover:text-gray-700 transition-colors duration-300"
                                 >
                                     {item}

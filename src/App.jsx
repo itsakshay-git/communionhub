@@ -9,10 +9,6 @@ import About from "./Pages/About";
 
 function App() {
 
-  useEffect(() => {
-    gsap.from(".fade-in", { opacity: 0, y: 50, duration: 1, stagger: 0.3 });
-  }, []);
-
   return (
     <Router>
       <div className="bg-black min-h-screen pb-4">
